@@ -1,179 +1,98 @@
 
+
 <!DOCTYPE html>
-<html lang="vi" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SAKATA | Giới thiệu công ty</title>
-
-  <!-- TailwindCSS (development CDN) -->
+  <meta charset="UTF-8">
+  <title>Sakata Vegetables Europe – IT Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Basic Favicon -->
-  <link rel="icon" type="image/png" href="/api/placeholder/32/32" />
 </head>
-<body class="font-sans antialiased text-gray-800">
-
-  <!-- Header -->
-  <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-    <div class="max-w-6xl mx-auto px-4 py-6 flex items-center justify-between">
-      <h1 class="text-2xl font-bold tracking-wide">SAKATA</h1>
-
-      <!-- Mobile menu button -->
-      <button id="menuBtn" class="lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-
-      <!-- Nav -->
-      <nav id="nav" class="hidden lg:block">
-        <ul class="lg:flex space-y-4 lg:space-y-0 lg:space-x-8 text-lg">
-          <li><a href="#about"  class="hover:underline">Về Chúng Tôi</a></li>
-          <li><a href="#services" class="hover:underline">Dịch Vụ</a></li>
-          <li><a href="#contact"  class="hover:underline">Liên Hệ</a></li>
-        </ul>
-      </nav>
+<body class="min-h-screen flex flex-col bg-gray-50 text-gray-800">
+  <!-- Header / Hero -->
+  <header class="bg-green-700 text-white">
+    <div class="container mx-auto px-4 py-12 text-center">
+      <h1 class="text-4xl font-bold mb-4">Sakata Vegetables Europe</h1>
+      <h2 class="text-2xl font-semibold mb-2">IT Support Department</h2>
+      <p class="max-w-2xl mx-auto">Chúng tôi giữ cho hạ tầng số của Sakata luôn vận hành trơn tru, hỗ trợ nhanh chóng mọi vấn đề công nghệ của bạn.</p>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative">
-    <div class="aspect-w-3 aspect-h-1">
-      <img src="/api/placeholder/1200/600" alt="SAKATA hero" class="object-cover w-full h-full" />
-    </div>
-    <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
-      <h2 class="text-white text-4xl md:text-6xl font-extrabold text-center px-4">
-        Giải pháp sáng tạo cho tương lai bền vững
-      </h2>
-    </div>
-  </section>
-
   <!-- About -->
-  <section id="about" class="max-w-4xl mx-auto px-4 py-16">
-    <h3 class="text-3xl font-semibold mb-4 text-indigo-600">Về SAKATA</h3>
-    <p class="leading-relaxed text-lg">
-      SAKATA là công ty tiên phong trong lĩnh vực công nghệ xanh và đổi mới sáng tạo.
-      Chúng tôi chuyên cung cấp các giải pháp toàn diện về IoT, điện toán đám mây và năng lượng tái tạo,
-      hướng tới mục tiêu phát triển bền vững cho cộng đồng và doanh nghiệp.
-    </p>
+  <section class="container mx-auto px-4 py-10">
+    <h3 class="text-2xl font-semibold mb-4">Nhiệm vụ của chúng tôi</h3>
+    <ul class="space-y-2 list-disc list-inside">
+      <li>Hỗ trợ người dùng nội bộ 24/7 qua email, điện thoại và desk-side.</li>
+      <li>Giám sát hệ thống máy chủ, mạng và ứng dụng doanh nghiệp.</li>
+      <li>Đảm bảo an toàn thông tin & sao lưu dữ liệu.</li>
+      <li>Tư vấn giải pháp CNTT tối ưu cho hoạt động trồng trọt và logistics.</li>
+    </ul>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="bg-gray-50 py-16">
-    <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-3xl font-semibold mb-10 text-indigo-600 text-center">Dịch Vụ Của Chúng Tôi</h3>
-
-      <div class="grid gap-8 md:grid-cols-3">
-        <div class="bg-white shadow rounded-lg p-6 text-center">
-          <div class="text-indigo-600 mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-          <h4 class="font-semibold text-xl mb-2">Giải pháp IoT</h4>
-          <p>Cung cấp hệ thống thiết bị và nền tảng IoT toàn diện giúp doanh nghiệp tối ưu hóa vận hành.</p>
-        </div>
-
-        <div class="bg-white shadow rounded-lg p-6 text-center">
-          <div class="text-indigo-600 mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M3 15a4 4 0 004 4h10a4 4 0 004-4V6H3v9z" />
-            </svg>
-          </div>
-          <h4 class="font-semibold text-xl mb-2">Điện toán đám mây</h4>
-          <p>Dịch vụ triển khai, quản lý và tối ưu hạ tầng cloud giúp tiết kiệm chi phí và tăng tính linh hoạt.</p>
-        </div>
-
-        <div class="bg-white shadow rounded-lg p-6 text-center">
-          <div class="text-indigo-600 mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 8c-3.866 0-7 3.134-7 7h14c0-3.866-3.134-7-7-7z" />
-            </svg>
-          </div>
-          <h4 class="font-semibold text-xl mb-2">Năng lượng tái tạo</h4>
-          <p>Giải pháp năng lượng sạch và các hệ thống quản lý thông minh giúp giảm phát thải carbon.</p>
-        </div>
-      </div>
-    </div>
+  <!-- Placeholder image banner -->
+  <section class="bg-white">
+    <img src="/api/placeholder/1200/400" alt="Sakata IT team" class="w-full object-cover aspect-[3/1]" />
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="max-w-2xl mx-auto px-4 py-16">
-    <h3 class="text-3xl font-semibold mb-4 text-indigo-600 text-center">Liên Hệ</h3>
-
-    <form id="contactForm" class="space-y-4">
+  <!-- Contact / Issue form -->
+  <section class="container mx-auto px-4 py-10 flex-grow">
+    <h3 class="text-2xl font-semibold mb-6 text-center">Gửi yêu cầu hỗ trợ</h3>
+    <form id="supportForm" class="max-w-xl mx-auto bg-white shadow rounded p-6 space-y-4">
       <div>
         <label class="block mb-1 font-medium" for="name">Họ tên</label>
-        <input id="name" type="text" required
-               class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-200" />
+        <input id="name" type="text" required class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-600">
       </div>
-
       <div>
         <label class="block mb-1 font-medium" for="email">Email</label>
-        <input id="email" type="email" required
-               class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-200" />
+        <input id="email" type="email" required class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-600">
       </div>
-
       <div>
-        <label class="block mb-1 font-medium" for="msg">Nội dung</label>
-        <textarea id="msg" rows="4" required
-                  class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-200"></textarea>
+        <label class="block mb-1 font-medium" for="subject">Tiêu đề</label>
+        <input id="subject" type="text" required class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-600">
       </div>
-
-      <button type="submit"
-              class="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition">
-        Gửi
-      </button>
+      <div>
+        <label class="block mb-1 font-medium" for="message">Mô tả vấn đề</label>
+        <textarea id="message" rows="4" required class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-2 rounded">Send</button>
+      <p id="alert" class="hidden text-center text-green-700 font-medium mt-2">Đang mở ứng dụng email...</p>
     </form>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-300 py-6 text-center text-sm">
-    © 2025 SAKATA. All rights reserved.
+  <footer class="bg-gray-200 text-center py-4 text-sm">
+    © 2025 Sakata Vegetables Europe – IT Support
   </footer>
 
   <!-- JavaScript -->
   <script>
-    // Toggle mobile menu
-    document.getElementById('menuBtn').addEventListener('click', () => {
-      document.getElementById('nav').classList.toggle('hidden');
-    });
+    const form = document.getElementById('supportForm');
+    const alertMsg = document.getElementById('alert');
 
-    // Basic form handler
-    document.getElementById('contactForm').addEventListener('submit', (e) => {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
-      alert('Cảm ơn bạn đã liên hệ SAKATA! Chúng tôi sẽ phản hồi sớm nhất.');
-      e.target.reset();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // Replace with your real support email
+      const supportEmail = "itsupport@sakata.eu";
+
+      // Compose mailto link
+      const mailtoLink = `mailto:${supportEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\n\nIssue:\n${message}`
+      )}`;
+
+      alertMsg.classList.remove('hidden');
+      setTimeout(() => {
+        window.location.href = mailtoLink;
+        alertMsg.classList.add('hidden');
+        form.reset();
+      }, 300);
     });
   </script>
-<script>window.parent.postMessage({ action: "ready" }, "*"); 
- 
-window.console = new Proxy(console, {
-  get(target, prop) {
-    if (['log', 'warn', 'error'].includes(prop)) {
-      return new Proxy(target[prop], {
-        apply(fn, thisArg, args) {
-          fn.apply(thisArg, args);
-          window.parent.postMessage({ action: 'console', 
-            type: prop, 
-            args: args.map((arg) => {
-              try {
-                return JSON.stringify(arg).replace(/^["']|["']$/g, '');
-              } catch (e) {
-                return arg;
-              }
-            }) 
-          }, '*');
-        }
-      });
-    }
-    return target[prop];
-  }
-});
-</script></body>
+</body>
 </html>
+
