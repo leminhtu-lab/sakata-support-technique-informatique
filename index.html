@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
@@ -6,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Site institutionnel de SAKATA Vegetables Europe : présentation, services, support IT & offres d’emploi." />
   <title>SAKATA Vegetables Europe</title>
-  <link rel="icon" href="/api/placeholder/32/32" />
+  <link rel="icon" href="/public/favicon.ico" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = { darkMode: 'class' };
@@ -19,12 +18,11 @@
     <div class="container mx-auto flex items-center justify-between px-4 py-4">
       <h1 class="text-xl sm:text-2xl font-bold">SAKATA Vegetables Europe</h1>
       <button id="menuBtn" class="sm:hidden focus:outline-none" aria-label="Ouvrir le menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
-             d="M4 6h16M4 12h16M4 18h16" /></svg>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
       </button>
-      <nav id="navLinks"
-           class="hidden sm:flex flex-col sm:flex-row gap-6 items-start sm:items-center absolute sm:static top-full left-0 w-full sm:w-auto bg-green-700 sm:bg-transparent px-4 py-4 sm:p-0 z-20">
+      <nav id="navLinks" class="hidden sm:flex flex-col sm:flex-row gap-6 items-start sm:items-center absolute sm:static top-full left-0 w-full sm:w-auto bg-green-700 sm:bg-transparent px-4 py-4 sm:p-0 z-20">
         <a class="text-white hover:text-green-200" href="#about">À propos</a>
         <a class="text-white hover:text-green-200" href="#services">Services</a>
         <a class="text-white hover:text-green-200" href="#it-support">Support IT</a>
@@ -42,8 +40,7 @@
 
   <!-- ===== Hero ===== -->
   <section class="relative">
-    <img src="/api/placeholder/1200/600" alt="Bannière Sakata" loading="lazy"
-         class="w-full h-64 sm:h-80 object-cover">
+    <img src="/public/hero-corn.jpg" alt="Bannière Sakata" loading="lazy" class="w-full h-64 sm:h-80 object-cover">
     <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
       <h2 class="text-white text-2xl sm:text-3xl font-semibold text-center px-4">
         Innovation et qualité pour une agriculture durable
@@ -61,8 +58,8 @@
       dans la recherche, la production et la distribution de graines de légumes de haute qualité
       pour la zone EMEA. Fondée en 1990 aux Pays-Bas, l’entreprise possède son siège à Uchaud,
       France, depuis 2003. Aujourd’hui, nos <strong>690 collaborateurs</strong> présents
-      dans&nbsp;24 pays proposent plus de <strong>900 variétés</strong> et livrent chaque
-      année plus de 1,8 million de sachets de graines dans&nbsp;80 pays.
+      dans 24 pays proposent plus de <strong>900 variétés</strong> et livrent chaque
+      année plus de 1,8 million de sachets de graines dans 80 pays.
     </p>
   </section>
 
@@ -73,35 +70,26 @@
         Nos Services
       </h2>
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Card -->
         <article class="bg-white dark:bg-gray-700 rounded-lg shadow p-6">
-          <img src="/api/placeholder/300/150" alt="Recherche"
-               class="rounded mb-4 w-full h-40 object-cover" loading="lazy" />
+          <img src="/public/recherche-picking.jpg" alt="Recherche" class="rounded mb-4 w-full h-40 object-cover" loading="lazy" />
           <h3 class="text-lg font-semibold text-green-700 dark:text-green-300 mb-2">
             Recherche & Sélection
           </h3>
-          <p>Nous développons des variétés innovantes adaptées
-             aux besoins des agriculteurs et aux conditions locales.</p>
+          <p>Nous développons des variétés innovantes adaptées aux besoins des agriculteurs et aux conditions locales.</p>
         </article>
-        <!-- Card -->
         <article class="bg-white dark:bg-gray-700 rounded-lg shadow p-6">
-          <img src="/api/placeholder/300/150" alt="Production"
-               class="rounded mb-4 w-full h-40 object-cover" loading="lazy" />
+          <img src="/public/production-veggies.jpg" alt="Production" class="rounded mb-4 w-full h-40 object-cover" loading="lazy" />
           <h3 class="text-lg font-semibold text-green-700 dark:text-green-300 mb-2">
             Production & Logistique
           </h3>
-          <p>Nos sites à Uchaud et Les Ponts-de-Cé assurent
-             une production et une livraison rapides et fiables.</p>
+          <p>Nos sites à Uchaud et Les Ponts-de-Cé assurent une production et une livraison rapides et fiables.</p>
         </article>
-        <!-- Card -->
         <article class="bg-white dark:bg-gray-700 rounded-lg shadow p-6">
-          <img src="/api/placeholder/300/150" alt="Support"
-               class="rounded mb-4 w-full h-40 object-cover" loading="lazy" />
+          <img src="/public/support-gardening.jpg" alt="Support" class="rounded mb-4 w-full h-40 object-cover" loading="lazy" />
           <h3 class="text-lg font-semibold text-green-700 dark:text-green-300 mb-2">
             Support aux Producteurs
           </h3>
-          <p>Nos équipes techniques accompagnent les agriculteurs
-             pour optimiser leurs cultures.</p>
+          <p>Nos équipes techniques accompagnent les agriculteurs pour optimiser leurs cultures.</p>
         </article>
       </div>
     </div>
@@ -116,23 +104,22 @@
       (Azure AD, Microsoft 365, systèmes logistiques, etc.).
     </p>
 
-    <!-- Job card -->
     <div class="bg-green-50 dark:bg-green-900/50 border border-green-200 dark:border-green-700 rounded-lg p-6">
       <h3 class="text-xl font-semibold text-green-700 dark:text-green-300 mb-4">
-        Offre d’emploi&nbsp;: Technicien·ne Junior Support IT
+        Offre d’emploi : Technicien·ne Junior Support IT
       </h3>
       <p class="mb-3">Poste basé à Uchaud, France.</p>
 
-      <h4 class="font-semibold mb-2">Missions&nbsp;:</h4>
+      <h4 class="font-semibold mb-2">Missions :</h4>
       <ul class="list-disc list-inside space-y-1 mb-4">
         <li>Support technique niveaux 1 et 2.</li>
         <li>Gestion des demandes via système de tickets.</li>
         <li>Installation et maintenance du matériel & logiciels.</li>
-        <li>Assistance sur Microsoft&nbsp;365 et applications internes.</li>
+        <li>Assistance sur Microsoft 365 et applications internes.</li>
         <li>Gestion des comptes & droits d’accès.</li>
       </ul>
 
-      <h4 class="font-semibold mb-2">Profil&nbsp;:</h4>
+      <h4 class="font-semibold mb-2">Profil :</h4>
       <ul class="list-disc list-inside space-y-1 mb-4">
         <li>Bac+2 en informatique.</li>
         <li>1-2 ans d’expérience (atout).</li>
@@ -145,10 +132,8 @@
       </a>
     </div>
 
-    <!-- Protected content (visible après login Azure Static Web Apps) -->
-    <div id="protectedContent"
-         class="hidden mt-8 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 rounded p-6">
-      <h3 class="text-lg font-semibold mb-2">Bienvenue&nbsp;!</h3>
+    <div id="protectedContent" class="hidden mt-8 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 rounded p-6">
+      <h3 class="text-lg font-semibold mb-2">Bienvenue !</h3>
       <p>Contenu interne réservé aux utilisateurs authentifiés.</p>
     </div>
   </section>
@@ -159,34 +144,25 @@
       <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-6 text-center">
         Contactez-nous
       </h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST"
-            class="space-y-4">
-        <input class="w-full rounded border border-gray-300 dark:border-gray-600
-                      bg-white dark:bg-gray-700 px-3 py-2"
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+        <input class="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2"
                type="text" name="name" placeholder="Nom complet" required />
-        <input class="w-full rounded border border-gray-300 dark:border-gray-600
-                      bg-white dark:bg-gray-700 px-3 py-2"
+        <input class="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2"
                type="email" name="email" placeholder="Email" required />
-        <!-- Honeypot -->
         <input type="text" name="_gotcha" style="display:none" />
-        <textarea class="w-full rounded border border-gray-300 dark:border-gray-600
-                         bg-white dark:bg-gray-700 px-3 py-2"
-                  name="message" rows="4"
-                  placeholder="Votre question ou problème" required></textarea>
-        <button type="submit"
-                class="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-2 rounded">
+        <textarea class="w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2"
+                  name="message" rows="4" placeholder="Votre question ou problème" required></textarea>
+        <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-2 rounded">
           Envoyer
         </button>
       </form>
     </div>
   </section>
 
-  <!-- ===== Footer ===== -->
   <footer class="bg-green-700 dark:bg-green-800 text-white text-center py-4 mt-auto">
     © 2025 SAKATA Vegetables Europe. Tous droits réservés.
   </footer>
 
-  <!-- ===== Scripts ===== -->
   <script>
     /* Menu mobile */
     const menuBtn = document.getElementById('menuBtn');
