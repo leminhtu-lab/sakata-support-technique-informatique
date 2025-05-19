@@ -1,141 +1,228 @@
+
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Site institutionnel de SAKATA Vegetables Europe : présentation, services, support IT & offres d’emploi." />
   <title>SAKATA Vegetables Europe</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background-color: #f4f4f4; color: #333; }
-    header { background: #2e7d32; color: white; padding: 20px; text-align: center; }
-    header h1 { font-size: 2.5em; }
-    nav { background: #1b5e20; padding: 10px; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { color: #c8e6c9; }
-    .hero { background: url('https://images.unsplash.com/photo-1507521628349-dee6e68b7d5f') no-repeat center/cover; padding: 100px 20px; text-align: center; color: white; }
-    .hero h2 { font-size: 2em; background: rgba(0, 0, 0, 0.5); padding: 10px; border-radius: 5px; }
-    .section { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
-    .section h2 { font-size: 1.8em; margin-bottom: 20px; color: #2e7d32; }
-    .services { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
-    .service-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); width: 300px; text-align: center; }
-    .service-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; }
-    .service-card h3 { margin: 10px 0; color: #1b5e20; }
-    form { display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto; }
-    input, textarea, button { padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em; }
-    button { background: #2e7d32; color: white; border: none; cursor: pointer; }
-    button:hover { background: #1b5e20; }
-    #protectedContent { display: none; background: #e8f5e9; padding: 20px; border-radius: 8px; margin-top: 20px; }
-    .job-offer { background: #e8f5e9; padding: 20px; border-radius: 8px; margin-top: 20px; }
-    .job-offer h3 { color: #1b5e20; margin-bottom: 10px; }
-    .job-offer ul { margin-left: 20px; }
-    footer { background: #2e7d32; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
-  </style>
+  <link rel="icon" href="/api/placeholder/32/32" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
 </head>
-<body>
-  <header>
-    <h1>SAKATA Vegetables Europe</h1>
+
+<body class="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+  <!-- ===== Header / Navigation ===== -->
+  <header class="bg-green-700 dark:bg-green-800 text-white">
+    <div class="container mx-auto flex items-center justify-between px-4 py-4">
+      <h1 class="text-xl sm:text-2xl font-bold">SAKATA Vegetables Europe</h1>
+      <button id="menuBtn" class="sm:hidden focus:outline-none" aria-label="Ouvrir le menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
+             d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+      <nav id="navLinks"
+           class="hidden sm:flex flex-col sm:flex-row gap-6 items-start sm:items-center absolute sm:static top-full left-0 w-full sm:w-auto bg-green-700 sm:bg-transparent px-4 py-4 sm:p-0 z-20">
+        <a class="text-white hover:text-green-200" href="#about">À propos</a>
+        <a class="text-white hover:text-green-200" href="#services">Services</a>
+        <a class="text-white hover:text-green-200" href="#it-support">Support IT</a>
+        <a class="text-white hover:text-green-200" href="#contact">Contact</a>
+        <a class="text-white/80 hover:text-green-200" href="/login">Connexion</a>
+        <a class="text-white/80 hover:text-green-200" href="/logout">Déconnexion</a>
+        <button id="themeToggle" class="ml-auto sm:ml-4 text-white/80 hover:text-green-200" aria-label="Basculer mode sombre">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2a1 1 0 0 0 0 2 8 8 0 1 1-8 8 1 1 0 0 0-2 0 10 10 0 1 0 10-10Z"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
   </header>
-  <nav>
-    <a href="#about">À propos</a>
-    <a href="#services">Services</a>
-    <a href="#it-support">Support IT</a>
-    <a href="#contact">Contact</a>
-    <a href="/login">Connexion</a>
-    <a href="/logout">Déconnexion</a>
-  </nav>
-  <section class="hero">
-    <h2>Innovation et qualité pour une agriculture durable</h2>
+
+  <!-- ===== Hero ===== -->
+  <section class="relative">
+    <img src="/api/placeholder/1200/600" alt="Bannière Sakata" loading="lazy"
+         class="w-full h-64 sm:h-80 object-cover">
+    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+      <h2 class="text-white text-2xl sm:text-3xl font-semibold text-center px-4">
+        Innovation et qualité pour une agriculture durable
+      </h2>
+    </div>
   </section>
 
-  <section id="about" class="section">
-    <h2>À propos de SAKATA Vegetables Europe</h2>
-    <p>SAKATA Vegetables Europe, filiale de Sakata Seed Corporation (Japon), est spécialisée dans la recherche, la production et la distribution de graines de légumes de haute qualité pour la région EMEA (Europe, Moyen-Orient et Afrique). Fondée en 1990 aux Pays-Bas, notre siège social est basé à Uchaud, dans le sud de la France, depuis 2003. Avec plus de 900 variétés de légumes, incluant le brocoli, la tomate, la courge, le melon et le chou, nous équipons les producteurs avec des graines adaptées aux sols et climats locaux. En 2023, nous avons livré 1,8 million de sachets de graines dans 80 pays, grâce à une équipe de 690 passionnés répartis dans 24 pays.</p>
+  <!-- ===== À propos ===== -->
+  <section id="about" class="container mx-auto px-4 py-12">
+    <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-6">
+      À propos de SAKATA Vegetables Europe
+    </h2>
+    <p class="leading-relaxed">
+      SAKATA Vegetables Europe, filiale de <em>Sakata Seed Corporation</em> (Japon), est spécialisée
+      dans la recherche, la production et la distribution de graines de légumes de haute qualité
+      pour la zone EMEA. Fondée en 1990 aux Pays-Bas, l’entreprise possède son siège à Uchaud,
+      France, depuis 2003. Aujourd’hui, nos <strong>690 collaborateurs</strong> présents
+      dans&nbsp;24 pays proposent plus de <strong>900 variétés</strong> et livrent chaque
+      année plus de 1,8 million de sachets de graines dans&nbsp;80 pays.
+    </p>
   </section>
 
-  <section id="services" class="section">
-    <h2>Nos Services</h2>
-    <div class="services">
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1591985313980-2d800950b504" alt="Recherche">
-        <h3>Recherche et Sélection</h3>
-        <p>Nous développons des variétés innovantes adaptées aux besoins des agriculteurs et aux conditions locales.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1611599635826-1e9c74a943c3" alt="Production">
-        <h3>Production et Logistique</h3>
-        <p>Nos sites à Uchaud et Les Ponts-de-Cé assurent une production et une livraison rapide et fiable.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1507521628349-dee6e68b7d5f" alt="Support">
-        <h3>Support aux Producteurs</h3>
-        <p>Nos équipes techniques accompagnent les agriculteurs pour optimiser leurs cultures.</p>
+  <!-- ===== Services ===== -->
+  <section id="services" class="bg-gray-100 dark:bg-gray-800 py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-8">
+        Nos Services
+      </h2>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Card -->
+        <article class="bg-white dark:bg-gray-700 rounded-lg shadow p-6">
+          <img src="/api/placeholder/300/150" alt="Recherche"
+               class="rounded mb-4 w-full h-40 object-cover" loading="lazy" />
+          <h3 class="text-lg font-semibold text-green-700 dark:text-green-300 mb-2">
+            Recherche & Sélection
+          </h3>
+          <p>Nous développons des variétés innovantes adaptées
+             aux besoins des agriculteurs et aux conditions locales.</p>
+        </article>
+        <!-- Card -->
+        <article class="bg-white dark:bg-gray-700 rounded-lg shadow p-6">
+          <img src="/api/placeholder/300/150" alt="Production"
+               class="rounded mb-4 w-full h-40 object-cover" loading="lazy" />
+          <h3 class="text-lg font-semibold text-green-700 dark:text-green-300 mb-2">
+            Production & Logistique
+          </h3>
+          <p>Nos sites à Uchaud et Les Ponts-de-Cé assurent
+             une production et une livraison rapides et fiables.</p>
+        </article>
+        <!-- Card -->
+        <article class="bg-white dark:bg-gray-700 rounded-lg shadow p-6">
+          <img src="/api/placeholder/300/150" alt="Support"
+               class="rounded mb-4 w-full h-40 object-cover" loading="lazy" />
+          <h3 class="text-lg font-semibold text-green-700 dark:text-green-300 mb-2">
+            Support aux Producteurs
+          </h3>
+          <p>Nos équipes techniques accompagnent les agriculteurs
+             pour optimiser leurs cultures.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="it-support" class="section">
-    <h2>Support IT</h2>
-    <p>Le département IT Support de SAKATA Vegetables Europe offre une assistance technique à nos employés et clients, garantissant le bon fonctionnement de nos outils numériques, y compris la gestion de l’authentification via Azure Active Directory (AAD). Nous proposons un support 24/7 pour résoudre les problèmes liés aux données, aux applications ou aux systèmes logistiques.</p>
-    <div class="job-offer">
-      <h3>Offre d’emploi : Technicien Junior Support IT (H/F)</h3>
-      <p>Nous recrutons un Technicien Junior Support IT pour rejoindre notre équipe à Uchaud, France.</p>
-      <h4>Missions :</h4>
-      <ul>
-        <li>Fournir un support technique de niveau 1 et 2 aux utilisateurs internes.</li>
-        <li>Gérer et suivre les demandes via un système de tickets.</li>
-        <li>Installer, configurer et maintenir le matériel et les logiciels (ordinateurs, imprimantes, etc.).</li>
-        <li>Assister les utilisateurs sur les applications internes et Microsoft 365.</li>
-        <li>Assurer la sécurité informatique (gestion des comptes, mots de passe, droits d’accès).</li>
+  <!-- ===== IT Support & Job Offer ===== -->
+  <section id="it-support" class="container mx-auto px-4 py-12">
+    <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-6">Support IT</h2>
+    <p class="mb-8 leading-relaxed">
+      Le département IT Support offre une assistance technique 24 h/24 aux employés
+      et clients, garantissant la disponibilité de nos outils numériques
+      (Azure AD, Microsoft 365, systèmes logistiques, etc.).
+    </p>
+
+    <!-- Job card -->
+    <div class="bg-green-50 dark:bg-green-900/50 border border-green-200 dark:border-green-700 rounded-lg p-6">
+      <h3 class="text-xl font-semibold text-green-700 dark:text-green-300 mb-4">
+        Offre d’emploi&nbsp;: Technicien·ne Junior Support IT
+      </h3>
+      <p class="mb-3">Poste basé à Uchaud, France.</p>
+
+      <h4 class="font-semibold mb-2">Missions&nbsp;:</h4>
+      <ul class="list-disc list-inside space-y-1 mb-4">
+        <li>Support technique niveaux 1 et 2.</li>
+        <li>Gestion des demandes via système de tickets.</li>
+        <li>Installation et maintenance du matériel & logiciels.</li>
+        <li>Assistance sur Microsoft&nbsp;365 et applications internes.</li>
+        <li>Gestion des comptes & droits d’accès.</li>
       </ul>
-      <h4>Profil recherché :</h4>
-      <ul>
-        <li>Diplôme Bac+2 ou plus en informatique.</li>
-        <li>1 à 2 ans d’expérience en support technique (un atout).</li>
-        <li>Bonnes compétences en communication et esprit d’équipe.</li>
-        <li>Maîtrise du français et de l’anglais (obligatoire).</li>
+
+      <h4 class="font-semibold mb-2">Profil&nbsp;:</h4>
+      <ul class="list-disc list-inside space-y-1 mb-4">
+        <li>Bac+2 en informatique.</li>
+        <li>1-2 ans d’expérience (atout).</li>
+        <li>Français & anglais courants.</li>
       </ul>
-      <h4>Avantages :</h4>
-      <ul>
-        <li>Un environnement de travail international et dynamique.</li>
-        <li>Des opportunités de développement professionnel au sein d’une entreprise leader.</li>
-      </ul>
-      <p>Pour postuler, veuillez envoyer votre CV et lettre de motivation via le <a href="https://sakata-vegetables.eu/jobs/technicien-junior-support-it-h-f/">formulaire de candidature</a>.</p>
+
+      <a href="https://sakata-vegetables.eu/jobs/technicien-junior-support-it-h-f/"
+         class="inline-block bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded">
+        Postuler
+      </a>
     </div>
-    <div id="protectedContent">
-      <h3>Bienvenue, utilisateur connecté !</h3>
-      <p>Vous pouvez accéder à des informations internes ou demander une assistance avancée ici.</p>
+
+    <!-- Protected content (visible après login Azure Static Web Apps) -->
+    <div id="protectedContent"
+         class="hidden mt-8 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 rounded p-6">
+      <h3 class="text-lg font-semibold mb-2">Bienvenue&nbsp;!</h3>
+      <p>Contenu interne réservé aux utilisateurs authentifiés.</p>
     </div>
   </section>
 
-  <section id="contact" class="section">
-    <h2>Contactez-nous</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Nom complet" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Votre question ou problème" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="bg-gray-100 dark:bg-gray-800 py-12">
+    <div class="container mx-auto px-4 max-w-lg">
+      <h2 class="text-2xl font-semibold text-green-700 dark:text-green-400 mb-6 text-center">
+        Contactez-nous
+      </h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST"
+            class="space-y-4">
+        <input class="w-full rounded border border-gray-300 dark:border-gray-600
+                      bg-white dark:bg-gray-700 px-3 py-2"
+               type="text" name="name" placeholder="Nom complet" required />
+        <input class="w-full rounded border border-gray-300 dark:border-gray-600
+                      bg-white dark:bg-gray-700 px-3 py-2"
+               type="email" name="email" placeholder="Email" required />
+        <!-- Honeypot -->
+        <input type="text" name="_gotcha" style="display:none" />
+        <textarea class="w-full rounded border border-gray-300 dark:border-gray-600
+                         bg-white dark:bg-gray-700 px-3 py-2"
+                  name="message" rows="4"
+                  placeholder="Votre question ou problème" required></textarea>
+        <button type="submit"
+                class="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-2 rounded">
+          Envoyer
+        </button>
+      </form>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 SAKATA Vegetables Europe. Tous droits réservés.</p>
+  <!-- ===== Footer ===== -->
+  <footer class="bg-green-700 dark:bg-green-800 text-white text-center py-4 mt-auto">
+    © 2025 SAKATA Vegetables Europe. Tous droits réservés.
   </footer>
 
+  <!-- ===== Scripts ===== -->
   <script>
+    /* Menu mobile */
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn?.addEventListener('click', () => {
+      navLinks.classList.toggle('hidden');
+    });
+
+    /* Dark-mode toggle (persiste dans localStorage) */
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'dark') root.classList.add('dark');
+
+    themeToggle?.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    /* Azure Static Web Apps Auth */
     async function checkAuth() {
       try {
-        const response = await fetch('/.auth/me');
-        const user = await response.json();
-        if (user && user.clientPrincipal) {
-          const content = document.getElementById('protectedContent');
-          content.style.display = 'block';
-          content.innerHTML += `<p>Bonjour, ${user.clientPrincipal.userDetails} !</p>`;
+        const res = await fetch('/.auth/me');
+        const data = await res.json();
+        if (data?.clientPrincipal) {
+          document.getElementById('protectedContent').classList.remove('hidden');
+          document.getElementById('protectedContent').insertAdjacentHTML(
+            'beforeend',
+            `<p class="mt-2">Bonjour, <strong>${data.clientPrincipal.userDetails}</strong>.</p>`
+          );
         }
-      } catch (error) {
-        console.error('Erreur lors de la vérification de l’authentification :', error);
+      } catch (err) {
+        console.error('Auth check error:', err);
       }
     }
-    window.onload = checkAuth;
+    addEventListener('DOMContentLoaded', checkAuth);
   </script>
 </body>
 </html>
