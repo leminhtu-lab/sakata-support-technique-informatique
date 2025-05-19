@@ -13,14 +13,23 @@
   "routes": [
     {
       "route": "/login",
-      "rewrite": "/.auth/login/aad"
+      "rewrite": "/.auth/login/aad",
+      "allowedRoles": ["anonymous"]
     },
     {
       "route": "/logout",
-      "rewrite": "/.auth/logout"
+      "rewrite": "/.auth/logout",
+      "allowedRoles": ["authenticated"]
     },
     {
-      "route": "/*"
+      "route": "/*",
+      "allowedRoles": ["authenticated"]
     }
-  ]
+  ],
+  "responseOverrides": {
+    "401": {
+      "redirect": "/login",
+      "statusCode": 302
+    }
+  }
 }
