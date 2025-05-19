@@ -3,7 +3,7 @@
     "identityProviders": {
       "azureActiveDirectory": {
         "registration": {
-          "openIdIssuer": "https://login.microsoftonline.com/<TENANT_ID>/v2.0",
+          "openIdIssuer": "https://login.microsoftonline.com/72df5474-6929-4ecd-8cb3-e01b66e7496e/v2.0",
           "clientIdSettingName": "AAD_CLIENT_ID",
           "clientSecretSettingName": "AAD_CLIENT_SECRET"
         }
@@ -20,8 +20,7 @@
       "rewrite": "/.auth/logout"
     },
     {
-      "route": "/*",
-      "allowedRoles": ["authenticated"]
+      "route": "/*"
     }
   ]
 }
